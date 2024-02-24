@@ -1,9 +1,23 @@
-# React + Vite
+# Personal Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Functional Requirements:
 
-Currently, two official plugins are available:
+1. Get data from a weather API
+   a. Load data on page render
+   b. Use Open Mateo as no API key is required
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# personalDashboard
+2. Get college course deadlines from Canvas API
+   a. Load data on page render
+   b. Use Canvas API
+
+3. Stocks API
+   a. Load data on page render
+   b. Use Alpha Vantage API
+
+4. Quotes API
+   a. Load data on page render
+   b. Use They Said So Quotes API
+
+5. Render the results of the API
+   a. Start with a render in the console
+   b. Show the data in a div
