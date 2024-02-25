@@ -81,7 +81,6 @@ const getWeather = async (lat, lon, timezone) => {
         params: { latitude: lat, longitude: lon, timezone },
       }
     );
-    // return res.data;
     return {
       current: parseCurrentWeather(res.data),
       daily: parseDailyWeather(res.data),
