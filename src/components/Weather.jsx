@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import getWeather from "../api/weatherApi.js";
+import { ICON_MAP } from "../utils/iconMap.js";
+import styles from "./Weather.module.css";
 
 const WeatherData = () => {
   const [loading, setLoading] = useState(true);
@@ -92,7 +94,30 @@ const WeatherData = () => {
     fetchWeather();
   }, []);
 
-  return <>{loading ? <></> : <h3>{curWeather.feelsLike}</h3>}</>;
+  return (
+    <section>
+      {loading ? (
+        <></>
+      ) : error ? (
+        <h2>Error Loading Data</h2>
+      ) : (
+        <>
+          <div className={styles.weatherToday}>
+            <img
+              className={styles.weatherIcon}
+              src={ICON_MAP.get(curWeather.iconCode)}
+              alt="weather-icon"
+            />
+            <h3>{curWeather.currentTemp}°C</h3>
+            <p>Feels Like: {curWeather.feelsLike}°C</p>
+            <p>
+              {curWeather.highTemp}°C / {curWeather.lowTemp}°C
+            </p>
+          </div>
+        </>
+      )}
+    </section>
+  );
 };
 
 export default WeatherData;
