@@ -1,4 +1,5 @@
 import fetchUpcomingEvents from "./api/canvasApi.js";
+import fetchQuotes from "./api/quotableApi.js";
 import { fetchStockData, fetchStockNews } from "./api/alphaVantageApi.js";
 import express from "express";
 import cors from "cors";
@@ -38,6 +39,15 @@ app.get("/api/market-news", async (req, res, next) => {
     console.log(topic);
     const news = await fetchStockNews(topic);
     res.json(news);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get("/api/quotes", async (req, res, next) => {
+  try {
+    const quotes = await fetchQuotes();
+    res.json(quotes);
   } catch (error) {
     console.log(error);
   }

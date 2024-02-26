@@ -8,8 +8,8 @@ const StockData = ({ ticker }) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get(`api/stock-data?ticker=${ticker}`);
-      setStock(response.data);
+      // const response = await axios.get(`api/stock-data?ticker=${ticker}`);
+      // setStock(response.data);
     } catch (error) {
       console.log(error);
     } finally {
@@ -27,8 +27,8 @@ const StockData = ({ ticker }) => {
   return (
     <div>
       <h2>Stock Data</h2>
-      <p>{stock["01. symbol"]}</p>
-      <p>{stock["05. price"]}</p>
+      <p>{stock["01. symbol"]}IBM</p>
+      <p>{stock["05. price"]}32</p>
     </div>
   );
 };

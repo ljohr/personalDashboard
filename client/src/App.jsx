@@ -3,6 +3,7 @@ import "./App.css";
 import WeatherData from "./components/Weather";
 import CanvasTasks from "./components/CanvasTasks";
 import StockData from "./components/StockData";
+import Quotes from "./components/Quotes";
 
 axios.defaults.baseURL = "http://localhost:4000";
 
@@ -13,6 +14,7 @@ function App() {
       <WeatherData />
       <CanvasTasks />
       <StockData ticker={"IBM"} />
+      <Quotes />
     </main>
   );
 }
