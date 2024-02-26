@@ -94,28 +94,23 @@ const WeatherData = () => {
     fetchWeather();
   }, []);
 
+  if (loading) return <></>;
+  if (error) return <h2>Error Loading Data</h2>;
+
   return (
     <section>
-      {loading ? (
-        <></>
-      ) : error ? (
-        <h2>Error Loading Data</h2>
-      ) : (
-        <>
-          <div className={styles.weatherToday}>
-            <img
-              className={styles.weatherIcon}
-              src={ICON_MAP.get(curWeather.iconCode)}
-              alt="weather-icon"
-            />
-            <h3>{curWeather.currentTemp}°C</h3>
-            <p>Feels Like: {curWeather.feelsLike}°C</p>
-            <p>
-              {curWeather.highTemp}°C / {curWeather.lowTemp}°C
-            </p>
-          </div>
-        </>
-      )}
+      <div className={styles.weatherToday}>
+        <img
+          className={styles.weatherIcon}
+          src={ICON_MAP.get(curWeather.iconCode)}
+          alt="weather-icon"
+        />
+        <h3>{curWeather.currentTemp}°C</h3>
+        <p>Feels Like: {curWeather.feelsLike}°C</p>
+        <p>
+          {curWeather.highTemp}°C / {curWeather.lowTemp}°C
+        </p>
+      </div>
     </section>
   );
 };

@@ -20,11 +20,19 @@ const fetchUpcomingEvents = async () => {
     const processedTasks = filteredTasks.map((task) => {
       const course = task.context_name;
       const taskTitle = task.assignment.name;
-      const dueAt = task.assignment.due_at;
+      const dueAt = new Date(task.assignment.due_at);
+      const formattedDate = dueAt.toLocaleString("en-US", {
+        weekday: "long", // "Monday"
+        year: "numeric", // "2024"
+        month: "long", // "February"
+        day: "numeric", // "26"
+        hour: "numeric", // "3 PM" or "15" based on hour12 option
+        minute: "numeric", // "00"
+        hour12: true, // Use 12-hour time
+      });
 
-      return { course, taskTitle, dueAt };
+      return { course, taskTitle, dueDate: formattedDate };
     });
-    console.log(processedTasks);
     return processedTasks;
   } catch (error) {
     console.error("Error fetching upcoming events from Canvas API:", error);
