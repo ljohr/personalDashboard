@@ -3,6 +3,7 @@ import fetchQuotes from "./api/quotableApi.js";
 import { fetchStockData, fetchStockNews } from "./api/alphaVantageApi.js";
 import express from "express";
 import cors from "cors";
+import getWeather from "./api/weatherApi.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -36,7 +37,6 @@ app.get("/api/stock-data", async (req, res, next) => {
 app.get("/api/market-news", async (req, res, next) => {
   try {
     const topic = req.query.topic;
-    console.log(topic);
     const news = await fetchStockNews(topic);
     res.json(news);
   } catch (error) {
@@ -48,6 +48,18 @@ app.get("/api/quotes", async (req, res, next) => {
   try {
     const quotes = await fetchQuotes();
     res.json(quotes);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get("/api/weather", async (req, res, next) => {
+  try {
+    const lat = Math.round(req.query.lat);
+    const lon = Math.round(req.query.lon);
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const weatherData = await getWeather(lat, lon, timezone);
+    res.json(weatherData);
   } catch (error) {
     console.log(error);
   }
