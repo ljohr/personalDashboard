@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { ICON_MAP } from "../utils/iconMap.js";
+import axios from "axios";
 import styles from "./WeatherData.module.css";
 
 const WeatherData = () => {
