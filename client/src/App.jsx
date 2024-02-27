@@ -6,7 +6,7 @@ import StockData from "./components/StockData";
 import Quotes from "./components/Quotes";
 import stockStyles from "./components/StockData.module.css";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = "https://personaldashboardapi.onrender.com";
 
 function App() {
   return (
