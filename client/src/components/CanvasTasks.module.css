@@ -16,11 +16,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 1rem;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   max-width: 100%;
   padding: 1rem 3rem;
 }
 
 .taskSingle p {
   padding-top: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .canvasInner {
+    grid-template-columns: auto;
+  }
 }

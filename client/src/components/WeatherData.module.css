@@ -6,6 +6,7 @@
   background-color: #f4f4f4;
   padding: 5rem 0.5rem;
   border-radius: 1rem;
+  text-align: center;
 }
 
 .weatherToday:hover {

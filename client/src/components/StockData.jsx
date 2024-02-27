@@ -31,7 +31,7 @@ const StockData = ({ ticker }) => {
       {!stock && <h4>Reacted API rate limit</h4>}
       {stock && (
         <>
-          <h4>{stock["01. symbol"]}</h4>
+          <h4>{Math.round(stock["01. symbol"])}</h4>
           <p>${stock["05. price"]}</p>
           <p>{stock["10. change percent"]}</p>
         </>

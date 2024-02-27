@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f4f4;
-  padding: 5rem;
+  padding: 5rem 0.5rem;
   border-radius: 1rem;
+  text-align: center;
 }
 
 .quotesSection:hover {
@@ -14,8 +15,4 @@
 
 .quotesSection p {
   padding-top: 0.5rem;
-}
-
-.quoteContent {
-  text-align: center;
 }

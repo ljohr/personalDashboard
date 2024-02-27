@@ -24,3 +24,9 @@ body {
   row-gap: 1rem;
   padding-bottom: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .row {
+    grid-template-columns: auto;
+  }
+}
