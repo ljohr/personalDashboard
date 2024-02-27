@@ -32,7 +32,7 @@ const Quotes = () => {
   return (
     <section className={styles.quotesSection}>
       <h2>Quote of the Day</h2>
-      <p>{quote}</p>
+      <p className={styles.quoteContent}>{quote}</p>
       <p>{author}</p>
     </section>
   );

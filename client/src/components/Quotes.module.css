@@ -15,3 +15,7 @@
 .quotesSection p {
   padding-top: 0.5rem;
 }
+
+.quoteContent {
+  text-align: center;
+}
