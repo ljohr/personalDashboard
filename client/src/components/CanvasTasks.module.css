@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f4f4;
-  padding: 5rem 0.5rem;
+  padding: 5rem 1rem;
   border-radius: 0.5rem;
 }
 
@@ -26,6 +26,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .canvasSection {
+    padding: 5rem 2rem;
+  }
+
   .canvasInner {
     grid-template-columns: auto;
   }

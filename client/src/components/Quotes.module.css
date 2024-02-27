@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f4f4;
-  padding: 5rem 0.5rem;
+  padding: 5rem 1rem;
   border-radius: 1rem;
   text-align: center;
 }
@@ -15,4 +15,10 @@
 
 .quotesSection p {
   padding-top: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .quotesSection {
+    padding: 5rem 2rem;
+  }
 }
