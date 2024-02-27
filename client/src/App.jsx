@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./App.css";
-import WeatherData from "./components/Weather";
+import WeatherData from "./components/WeatherData";
 import CanvasTasks from "./components/CanvasTasks";
 import StockData from "./components/StockData";
 import Quotes from "./components/Quotes";

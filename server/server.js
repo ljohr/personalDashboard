@@ -57,7 +57,7 @@ app.get("/api/weather", async (req, res, next) => {
   try {
     const lat = Math.round(req.query.lat);
     const lon = Math.round(req.query.lon);
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const timezone = req.query.timezone;
     const weatherData = await getWeather(lat, lon, timezone);
     res.json(weatherData);
   } catch (error) {
