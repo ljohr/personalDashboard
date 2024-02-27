@@ -1,9 +1,9 @@
-import fetchUpcomingEvents from "./api/canvasApi.js";
-import fetchQuotes from "./api/quotableApi.js";
 import { fetchStockData, fetchStockNews } from "./api/alphaVantageApi.js";
+import fetchUpcomingEvents from "./api/canvasApi.js";
+import getWeather from "./api/weatherApi.js";
+import fetchQuotes from "./api/quotableApi.js";
 import express from "express";
 import cors from "cors";
-import getWeather from "./api/weatherApi.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
