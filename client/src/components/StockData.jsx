@@ -28,7 +28,7 @@ const StockData = ({ ticker }) => {
 
   return (
     <div className={styles.stockSingle}>
-      {!stock && <h4>Reacted API rate limit</h4>}
+      {!stock && <h4>API rate limit reached</h4>}
       {stock && (
         <>
           <h4>{Math.round(stock["01. symbol"])}</h4>
