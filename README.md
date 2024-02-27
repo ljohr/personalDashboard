@@ -4,6 +4,10 @@ This dashboard is a personalized hub for tracking Canvas course deadlines, stock
 
 <img width="1597" alt="dashboard" src="https://github.com/ljohr/personalDashboard/assets/46297075/e505bfb6-cb75-4428-a089-0a064302fb8c">
 
+## See Live
+Please note that I am using the free tier of Render's web service, so the server will go idle without use. Please try again after 50 seconds if nothing loads. https://personaldashboard-3ayp.onrender.com/
+
+
 ## API Endpoints
 The server provides several endpoints for data retrieval:
 - `/api/canvasApi`: Fetches upcoming events from the Canvas LMS REST API.
