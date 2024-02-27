@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import styles from "./CanvasTasks.module.css";
 
 const CanvasTasks = () => {
   const [loading, setLoading] = useState(true);
@@ -27,17 +28,19 @@ const CanvasTasks = () => {
   if (error) return <h2>Error Loading Data</h2>;
 
   return (
-    <section>
+    <section className={styles.canvasSection}>
       <h2>Canvas Tasks</h2>
-      {tasks.map((task, index) => {
-        return (
-          <div key={index}>
-            <p>{task.course}</p>
-            <p>{task.taskTitle}</p>
-            <p>{task.dueDate}</p>
-          </div>
-        );
-      })}
+      <div className={styles.canvasInner}>
+        {tasks.map((task, index) => {
+          return (
+            <div key={index} className={styles.taskSingle}>
+              <h4>{task.course}</h4>
+              <p>{task.taskTitle}</p>
+              <p>{task.dueDate}</p>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };

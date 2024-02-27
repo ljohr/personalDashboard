@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ICON_MAP } from "../utils/iconMap.js";
-import styles from "./Weather.module.css";
+import styles from "./WeatherData.module.css";
 
 const WeatherData = () => {
   const [loading, setLoading] = useState(true);
@@ -103,8 +103,9 @@ const WeatherData = () => {
   if (error) return <h2>Error Loading Data</h2>;
 
   return (
-    <section>
-      <div className={styles.weatherToday}>
+    <section className={styles.weatherToday}>
+      <h2>Weather Now</h2>
+      <div className={styles.weatherInner}>
         <img
           className={styles.weatherIcon}
           src={ICON_MAP.get(curWeather.iconCode)}

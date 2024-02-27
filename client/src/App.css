@@ -1,0 +1,22 @@
+.dashboardMain {
+  background-color: rgb(250 250 250);
+  padding: 2.5rem 3.5rem;
+}
+
+.title {
+  padding-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+
+.dashboard-container {
+  border-top: 0.5px solid rgba(75, 75, 75, 0.292);
+  padding: 1rem 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+}

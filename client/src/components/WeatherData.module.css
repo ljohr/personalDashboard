@@ -1,0 +1,29 @@
+.weatherToday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 5rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.weatherToday:hover {
+  transform: scale(1.01);
+}
+
+.weatherInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherInner p {
+  padding-top: 0.5rem;
+}
+
+.weatherIcon {
+  padding: 0.5rem 0;
+  max-height: 3rem;
+}

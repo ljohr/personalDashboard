@@ -6,7 +6,6 @@ const fetchStockData = async (symbol) => {
     const request = await axios.get(
       `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`
     );
-    console.log(request.data);
     return request.data;
   } catch (error) {
     console.log(error);

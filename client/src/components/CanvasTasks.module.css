@@ -1,0 +1,26 @@
+.canvasSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.canvasSection:hover {
+  transform: scale(1.01);
+}
+
+.canvasInner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 1rem;
+  row-gap: 2rem;
+  max-width: 100%;
+  padding: 1rem 3rem;
+}
+
+.taskSingle p {
+  padding-top: 0.5rem;
+}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
+import styles from "./Quotes.module.css";
 
 const Quotes = () => {
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ const Quotes = () => {
   if (error) return <h2>Error Loading Data</h2>;
 
   return (
-    <section>
+    <section className={styles.quotesSection}>
       <h2>Quote of the Day</h2>
       <p>{quote}</p>
       <p>{author}</p>
