@@ -8,7 +8,7 @@ This dashboard is a personalized hub for tracking Canvas course deadlines, stock
 
 ## See Live
 
-Please note that I am using the free tier of Render's web service, so the server will go idle without use. Please try again after 2-3 minutes if nothing loads. https://personaldashboard-3ayp.onrender.com/
+Please note that I am using the free tier of Render's web service, so the server will go idle without use. Please reload the page after 2-3 minutes if nothing is displayed. https://personaldashboard-3ayp.onrender.com/
 
 ## API Endpoints
 
